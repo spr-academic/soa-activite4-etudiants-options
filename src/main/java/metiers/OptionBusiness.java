@@ -6,9 +6,9 @@ import java.util.Iterator;
 import java.util.List;
 
 public class OptionBusiness {
-    private static List<Option> options;
+    private static final List<Option> options;
 
-    public OptionBusiness() {
+    static {
         options = new ArrayList<Option>();
         // Initialisation avec quelques exemples
         options.add(new Option(1, "Informatique", "Informatique", "M. Responsable Informatique", 30, 1, 30));
@@ -27,6 +27,9 @@ public class OptionBusiness {
     }
 
     public boolean addOption(Option option) {
+        if (getOptionByCode(option.getCodeOption()) != null) {
+            return false;
+        }
         return options.add(option);
     }
 
@@ -70,7 +73,14 @@ public class OptionBusiness {
         }
 
         if (index != -1) {
-            options.set(index, updatedOption);
+            // Conserver l'objet référencé par les étudiants déjà affectés.
+            Option existing = options.get(index);
+            existing.setLibelle(updatedOption.getLibelle());
+            existing.setDomaine(updatedOption.getDomaine());
+            existing.setResponsable(updatedOption.getResponsable());
+            existing.setCredits(updatedOption.getCredits());
+            existing.setSemestre(updatedOption.getSemestre());
+            existing.setCapacite(updatedOption.getCapacite());
             return true;
         } else {
             return false;
@@ -78,10 +88,12 @@ public class OptionBusiness {
     }
 
     public List<Option> getListeOptions() {
-        return options;
+        return new ArrayList<>(options);
     }
 
     public void setOptions(List<Option> options) {
-        this.options = options;
+        List<Option> copy = new ArrayList<>(options);
+        OptionBusiness.options.clear();
+        OptionBusiness.options.addAll(copy);
     }
 }

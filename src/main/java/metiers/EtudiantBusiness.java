@@ -8,10 +8,10 @@ import java.util.Iterator;
 import java.util.List;
 
 public class EtudiantBusiness {
-    private static List<Etudiant> etudiants;
-    private OptionBusiness optionBusiness = new OptionBusiness();
+    private static final List<Etudiant> etudiants;
+    private static final OptionBusiness optionBusiness = new OptionBusiness();
 
-    public EtudiantBusiness() {
+    static {
         etudiants = new ArrayList<Etudiant>();
         // Initialisation avec quelques données de test
         etudiants.add(new Etudiant("I001", "Doe", "Jean", optionBusiness.getOptionByCode(1), 2023, "jean.doe@example.com"));
@@ -21,6 +21,9 @@ public class EtudiantBusiness {
 
     // Ajouter un etudiant
     public boolean addEtudiant(Etudiant etudiant) {
+        if (etudiant.getOption() == null || getEtudiantByIdentifiant(etudiant.getIdentifiant()) != null) {
+            return false;
+        }
         int codeOption = etudiant.getOption().getCodeOption();
         Option option = optionBusiness.getOptionByCode(codeOption);
         if (option != null) {
@@ -53,11 +56,19 @@ public class EtudiantBusiness {
 
     // Récupérer tous les etudiants
     public List<Etudiant> getAllEtudiants() {
-        return etudiants;
+        return new ArrayList<>(etudiants);
     }
 
     // Mettre à jour un etudiant
     public boolean updateEtudiant(String identifiant, Etudiant updatedEtudiant) {
+        if (updatedEtudiant.getOption() == null) {
+            return false;
+        }
+        Option option = optionBusiness.getOptionByCode(updatedEtudiant.getOption().getCodeOption());
+        if (option == null) {
+            return false;
+        }
+        updatedEtudiant.setOption(option);
         for (int i = 0; i < etudiants.size(); i++) {
             if (etudiants.get(i).getIdentifiant().equals(identifiant)) {
                 etudiants.set(i, updatedEtudiant);
