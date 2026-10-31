@@ -1,0 +1,10 @@
+{
+  "identifiant": "I0010",
+  "nom": "Etudiant 5",
+  "prenom": "Etudiant 5",
+  "option": {
+    "codeOption": 2
+  },
+  "anneeEtude": 2023,
+  "email": "etudiant5@example.com"
+}

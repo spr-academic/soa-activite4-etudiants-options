@@ -1,0 +1,16 @@
+{
+  "identifiant": "I0010",
+  "nom": "Etudiant 1",
+  "prenom": "Etudiant 1",
+  "option": {
+    "codeOption": 1,
+    "libelle": "Informatique",
+    "domaine": "Informatique",
+    "responsable": "M. Responsable Informatique",
+    "credits": 30,
+    "semestre": 1,
+    "capacite": 30
+  },
+  "anneeEtude": 2023,
+  "email": "etudiant1@example.com"
+}

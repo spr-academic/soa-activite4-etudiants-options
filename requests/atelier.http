@@ -1,0 +1,63 @@
+# Requêtes exécutables dans le client HTTP IntelliJ (selon édition) ou un outil compatible.
+@base = http://localhost:8080/soa-activite4-etudiants-options/rest
+
+### A.1 — Créer une option (code 6 libre dans les données initiales)
+POST {{base}}/options
+Content-Type: application/json
+
+< ./option-create.json
+
+### A.2 — Toutes les options
+GET {{base}}/options
+Accept: application/json
+
+### A.3 — Filtrer par domaine
+GET {{base}}/options?domaine=Math%C3%A9matiques
+Accept: application/json
+
+### A.5 — Modifier l'option créée
+PUT {{base}}/options/6
+Content-Type: application/json
+
+< ./option-update.json
+
+### A.6 — Lire l'option créée
+GET {{base}}/options/6
+Accept: application/json
+
+### A.4 — Supprimer l'option créée
+DELETE {{base}}/options/6
+
+### B.1 — Créer un étudiant
+POST {{base}}/etudiants
+Content-Type: application/json
+
+< ./etudiant-create.json
+
+### B.2 — Tous les étudiants
+GET {{base}}/etudiants
+Accept: application/json
+
+### B.3 — Lire un étudiant
+GET {{base}}/etudiants/I003
+Accept: application/json
+
+### B.5 — Modifier l'étudiant créé
+PUT {{base}}/etudiants/I0010
+Content-Type: application/json
+
+< ./etudiant-update.json
+
+### B.6 — Étudiants de l'option 1, au format XML
+GET {{base}}/etudiants/option?codeOption=1
+Accept: application/xml
+
+### B.4 — Supprimer l'étudiant créé
+DELETE {{base}}/etudiants/I0010
+
+### Option inexistante : 404
+GET {{base}}/options/9999
+
+### Option inexistante pour la liste XML : 404
+GET {{base}}/etudiants/option?codeOption=9999
+Accept: application/xml
