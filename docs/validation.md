@@ -1,6 +1,6 @@
 # Validation — Activité 4
 
-**Date : 31 octobre 2026**
+**Dernière validation : 4 novembre 2026**
 
 **Résultat : compilation réussie, WAR construit, 22 tests réussis, 0 échec, 0 erreur, 0 test ignoré.**
 
@@ -9,7 +9,8 @@
 - Java : 21.0.13 (Eclipse Adoptium).
 - Maven : 3.9.11.
 - Jersey : 2.27 ; Jetty : 9.4.57.v20241219.
-- Commande : `mvn clean verify`, avec JDK 21 sélectionné.
+- Commande exécutée : `mvn -o clean verify`, avec JDK 21 sélectionné et les dépendances déjà disponibles localement.
+- Première validation : 31 octobre 2026 ; vérification complète renouvelée le 4 novembre 2026.
 
 ## Méthode
 

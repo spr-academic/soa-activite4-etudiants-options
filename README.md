@@ -8,7 +8,7 @@
 
 Cette application expose la gestion des étudiants et des options sous forme d’une API REST. Elle utilise **JAX-RS (`javax.ws.rs`)**, **Jersey 2.27** et un stockage en mémoire, et se construit en archive **WAR**, conformément à l’énoncé.
 
-**Validation : 22 tests HTTP réussis sur le WAR, aucun échec.** Voir le [compte rendu](docs/validation.md).
+**Validation : 22 tests HTTP réussis sur le WAR, aucun échec.** Voir le [compte rendu](docs/validation.md) et le [guide de remise et de démonstration](docs/remise.md).
 
 ## Démarrer le projet
 
