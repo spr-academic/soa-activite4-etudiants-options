@@ -1,25 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<testsuite name="integration.RestApiIT" time="1.152" tests="22" errors="0" skipped="0" failures="0">
-  <testcase name="createOptionSurvivesSubsequentRequestsAndBusinessConstruction" classname="integration.RestApiIT" time="0.194" />
-  <testcase name="createStudentUsesExistingCanonicalOptionAndPersists" classname="integration.RestApiIT" time="0.011" />
+<testsuite name="integration.RestApiIT" time="2.156" tests="22" errors="0" skipped="0" failures="0">
+  <testcase name="createOptionSurvivesSubsequentRequestsAndBusinessConstruction" classname="integration.RestApiIT" time="0.341" />
+  <testcase name="createStudentUsesExistingCanonicalOptionAndPersists" classname="integration.RestApiIT" time="0.013" />
   <testcase name="getStudentMatchesPdfExample" classname="integration.RestApiIT" time="0.004" />
-  <testcase name="studentsListContainsNestedOptionInJson" classname="integration.RestApiIT" time="0.005" />
-  <testcase name="studentIdentityMismatchIsRejected" classname="integration.RestApiIT" time="0.009" />
-  <testcase name="mediaTypesAreEnforced" classname="integration.RestApiIT" time="0.004" />
-  <testcase name="updateOptionAlsoUpdatesItsRepresentationInAssignedStudents" classname="integration.RestApiIT" time="0.013" />
-  <testcase name="updateStudentChangesFieldsAndAssignment" classname="integration.RestApiIT" time="0.007" />
-  <testcase name="studentsByOptionReturnExactXmlShapeAndCorrectStudents" classname="integration.RestApiIT" time="0.085" />
+  <testcase name="studentsListContainsNestedOptionInJson" classname="integration.RestApiIT" time="0.006" />
+  <testcase name="studentIdentityMismatchIsRejected" classname="integration.RestApiIT" time="0.014" />
+  <testcase name="mediaTypesAreEnforced" classname="integration.RestApiIT" time="0.007" />
+  <testcase name="updateOptionAlsoUpdatesItsRepresentationInAssignedStudents" classname="integration.RestApiIT" time="0.018" />
+  <testcase name="updateStudentChangesFieldsAndAssignment" classname="integration.RestApiIT" time="0.009" />
+  <testcase name="studentsByOptionReturnExactXmlShapeAndCorrectStudents" classname="integration.RestApiIT" time="0.118" />
   <testcase name="getOptionReturnsAllFields" classname="integration.RestApiIT" time="0.004" />
   <testcase name="existingOptionWithoutStudentsReturnsEmptyXmlList" classname="integration.RestApiIT" time="0.006" />
   <testcase name="studentsByUnknownOptionReturn404AndMissingParameterReturns400" classname="integration.RestApiIT" time="0.005" />
-  <testcase name="optionsFilterHandlesAccentedDomainAndUnknownDomain" classname="integration.RestApiIT" time="0.006" />
-  <testcase name="updateStudentRejectsUnknownOptionWithoutChangingState" classname="integration.RestApiIT" time="0.008" />
-  <testcase name="malformedBodiesAreRejected" classname="integration.RestApiIT" time="0.012" />
-  <testcase name="deleteStudentReturnsEmpty204Then404" classname="integration.RestApiIT" time="0.007" />
-  <testcase name="optionsListIsJsonAndContainsSuppliedSeeds" classname="integration.RestApiIT" time="0.004" />
-  <testcase name="deleteOptionReturnsEmpty204Then404" classname="integration.RestApiIT" time="0.008" />
-  <testcase name="createStudentWithUnknownOptionReturns404WithoutInsertion" classname="integration.RestApiIT" time="0.004" />
-  <testcase name="optionIdentityMismatchIsRejectedWithoutChangingState" classname="integration.RestApiIT" time="0.005" />
+  <testcase name="optionsFilterHandlesAccentedDomainAndUnknownDomain" classname="integration.RestApiIT" time="0.004" />
+  <testcase name="updateStudentRejectsUnknownOptionWithoutChangingState" classname="integration.RestApiIT" time="0.009" />
+  <testcase name="malformedBodiesAreRejected" classname="integration.RestApiIT" time="0.011" />
+  <testcase name="deleteStudentReturnsEmpty204Then404" classname="integration.RestApiIT" time="0.005" />
+  <testcase name="optionsListIsJsonAndContainsSuppliedSeeds" classname="integration.RestApiIT" time="0.002" />
+  <testcase name="deleteOptionReturnsEmpty204Then404" classname="integration.RestApiIT" time="0.005" />
+  <testcase name="createStudentWithUnknownOptionReturns404WithoutInsertion" classname="integration.RestApiIT" time="0.005" />
+  <testcase name="optionIdentityMismatchIsRejectedWithoutChangingState" classname="integration.RestApiIT" time="0.004" />
   <testcase name="missingStudentGetAndUpdateReturn404" classname="integration.RestApiIT" time="0.004" />
-  <testcase name="missingOptionGetAndUpdateReturn404" classname="integration.RestApiIT" time="0.004" />
+  <testcase name="missingOptionGetAndUpdateReturn404" classname="integration.RestApiIT" time="0.005" />
 </testsuite>

@@ -43,3 +43,7 @@ mvn clean verify
 ```
 
 Les rapports complets sont régénérés dans `target/failsafe-reports/`. Le serveur temporaire est arrêté automatiquement à la fin des tests. Les données modifiées pendant ces tests n’affectent pas une autre instance de l’application.
+
+## Vérification du lancement
+
+Le 4 novembre 2026, le lancement par `mvn jetty:run-war` a également été vérifié : liste des options en JSON et inscriptions par option en XML reçues avec `200 OK`.
